@@ -1,6 +1,7 @@
 ﻿using Gerenciamento.API.DTO;
 using GerenciamentoAPI.Data;
 using GerenciamentoAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
@@ -9,6 +10,7 @@ namespace Gerenciamento.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class PessoaJuridicaController : ControllerBase
     {
         public readonly ApplicationDBContext _dbContext;
